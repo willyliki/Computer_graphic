@@ -192,6 +192,9 @@ function updateTextOverlay() {
         Robot wrist: 3 <br>
         Object top: 4 <br>
         Object bottom: 5 <br>
+        Rotate: r/R <br>
+        -------------------------------------------------------------------------------<br>
+        Grab: g/G <br>
         -------------------------------------------------------------------------------<br>
         Zoom in: z/Z <br>
         Zoom out: x/X <br>
