@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dino Jump </title>
+        <style>
+            #webgl {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    
+            #textOverlay {
+                position: absolute;
+                top: 10px;
+                left: 820px;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                pointer-events: none;
+                z-index: 10;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px;
+                border-radius: 8px;
+                max-width: 800px;
+            }
+        </style>
+    </head>
+
+    <body onload="main()">
+        <div id="textOverlay"></div>
+        <canvas id="webgl" width = "800" height = "800">
+            Please use a browser that support "canvas"
+        </canvas>
+        <script src="cuon-matrix.js"></script>
+        <script src="WebGL.js"></script>
+    </body>
+</html>
+
+

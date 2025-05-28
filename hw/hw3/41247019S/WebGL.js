@@ -160,7 +160,6 @@ var mvpMatrix;
 var modelMatrix;
 var normalMatrix;
 var nVertex;
-var cameraX = 0, cameraY = 4, cameraZ = 12;
 var dino = [];
 var joint = [];
 var arm = [];
@@ -168,6 +167,7 @@ var hand = [];
 var cube = [];
 var XmoveDistance = 0;
 var ZmoveDistance = 0;
+var cameraX = 0, cameraY = 4, cameraZ = 12;
 var rotateAngle = 0;
 var sceneScale = 1;
 var grab = false;
@@ -490,8 +490,8 @@ function drawOneObject(obj, mdlMatrix, colorR, colorG, colorB){
     modelMatrix.rotate(angleX, 0, 1, 0);
     modelMatrix.multiply(mdlMatrix);
  
-    mvpMatrix.setPerspective(30, 1, 1, 100);
-    mvpMatrix.lookAt(cameraX, cameraY, cameraZ, 0, 0, 0, 0, 1, 0);
+    mvpMatrix.setPerspective(30, 1, 1, 100); // x+XmoveDistance*5, z+ZmoveDistance*5(camera move with dino)
+    mvpMatrix.lookAt(cameraX, cameraY, cameraZ, 0, 0, 0, 0, 1, 0); // x+XmoveDistance*5, z+ZmoveDistance*5(camera move with dino)
     mvpMatrix.multiply(modelMatrix);
 
     normalMatrix.setInverseOf(modelMatrix);
